@@ -19,7 +19,7 @@ def repeat_all_messages(message):
 	im=str(cur.fetchall())
 	cur.execute(sql_vzv,(slovo,))
 	vzv=str(cur.fetchall())
-	answer=fam[3:(len(fam)-4)]+" "+im[3:(len(im)-4)]
+	answer=fam[3:(len(fam)-4)]+" "+im[3:(len(im)-4)]+" "+vzv[2:(len(vzv)-3)]
 	conn.close()
 	bot.send_message(message.chat.id,answer)
 bot.polling()
